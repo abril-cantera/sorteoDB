@@ -55,7 +55,7 @@ export default function sorteodos(input, agregar, ganador, jugadores) {
   });
 
   //
-  const api = 'http://3.133.152.247:5000/winner'
+  const api = 'http://3.133.152.247:5000/api/v1/winner'
   async function pushWinner(name) {
     const res = await fetch(api, {
       method: 'POST',
