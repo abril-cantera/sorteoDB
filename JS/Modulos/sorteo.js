@@ -87,22 +87,14 @@ function sorteoDos(input, agregar, ganador, jugadores) {
   });
 };
 
+const btnn = d.getElementById('apii')
+btnn.addEventListener('click', posttData)
 
-
-const api = 'http://3.133.152.247:5000/api/v1/winner'
-async function postData(nameWinner) {
-  const response = await fetch(api, {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      'nameWinner': nameWinner,
-    })
-  });
+async function posttData() {
+  const api = 'http://3.133.152.247:5000/api/v1/winner'
+  const response = await fetch(api)
   const data = await response.json();
   console.log(data);
 
-  console.log('Enviado');
+  console.log('GET');
 }

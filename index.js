@@ -31,8 +31,7 @@ app.use(boomErrorHandler);
 app.use(errorHandler);
 
 
-app.listen(port, () => {
-  console.log(`Mi port ${port}`);
-});
+app.listen(5000)
+console.log('Server on port 5000')
 
 

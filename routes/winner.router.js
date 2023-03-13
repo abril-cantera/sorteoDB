@@ -1,10 +1,10 @@
 const express = require('express');
+const router = express.Router();
 
 const WinnerService = require('./../services/winner.service');
 const validatorHandler = require('../middlewares/validator.handler');
 const { createWinnerSchema, updateWinnerSchema, getWinnerSchema } = require('./../schemas/winner.schema');
 
-const router = express.Router();
 const service = new WinnerService();
 
 router.get('/',
