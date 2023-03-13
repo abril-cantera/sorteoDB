@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 
 app.use(express.json());
 
-const whitelist = ['http://localhost:3000', 'http://3.144.244.212:5000/api/v1/group'];
+const whitelist = ['http://localhost:3000', 'http://3.133.152.247:5000/winner'];
 const options = {
   origin: (origin, callback) => {
     if (whitelist.includes(origin) || !origin) {
